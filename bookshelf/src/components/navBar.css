@@ -1,0 +1,49 @@
+nav {
+    text-decoration: none;
+    color: #3a3a3a;
+    max-width: 100%;
+    height: auto;
+    top: 0px;
+    opacity: 1;
+    font-family: "Roboto Mono", monospace;
+    display: inline-block;
+    display: flex;
+    align-items: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    padding: 0.5rem;
+    background-color: rgb(31, 31, 31);
+    padding-top: 0.6vw;
+    padding-bottom: 1vw;
+    font-size: 2.5vw;
+    height: 2.5vw;
+  }
+  
+  .nav :hover {
+    background-color: white;
+  }
+  
+  a:link {
+    text-decoration: none;
+    background-color: transparent;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    background-color: transparent;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    background-color: transparent;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: grey
+  }
+  
+  .NavLinks {
+    color: white;
+  }
