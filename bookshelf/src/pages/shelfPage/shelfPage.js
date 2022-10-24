@@ -19,10 +19,12 @@ function ShelfPage() {
                 </div>
                 <div id="contentDiv">
                     <div id="titleDiv">
-        <h1>Shelf page</h1>
+        <h1>Reading</h1>
         </div>
         <BookList sendData={collectData} /> 
+        <div id="displayBooks">
         <>{showBooks}</>
+        </div>
         </div>
         </div>
     )

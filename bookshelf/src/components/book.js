@@ -15,12 +15,20 @@ function Book(props) {
         setGenre(props.genre);
     }, []);
 
-    console.log(props.author);
+    function changeArray(event) {
+        console.log(event.target.value);
+        console.log("change array has ran");
+    };
     return (
         <div className="bookBorder">
             <p id="title">{title}</p>
             <p id="author">{author}</p>
             <p id="genre">{genre}</p>
+            <select className="bookSelect" onChange={changeArray}>
+                <option value="one">One</option>
+                <option value="two">Two</option>
+                <option value="three">Three</option>
+            </select>
         </div>
     )
 }
