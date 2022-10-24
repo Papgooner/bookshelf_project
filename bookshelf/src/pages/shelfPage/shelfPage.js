@@ -13,16 +13,16 @@ function ShelfPage() {
     };
     const showBooks = data?.map((pol) => <Book key={pol.id} title={pol.title} id={pol.id} author={pol.author} genre={pol.genre} />)
     return (
-        <div>
+        <div id="shelfPageDiv">
             <div id="navDiv">
                 <NavBar />
                 </div>
                 <div id="contentDiv">
+                    <div id="titleDiv">
         <h1>Shelf page</h1>
-        <BookList sendData={collectData} /> 
-        <div className="stopDivEscaping">
-        {showBooks}
         </div>
+        <BookList sendData={collectData} /> 
+        <>{showBooks}</>
         </div>
         </div>
     )

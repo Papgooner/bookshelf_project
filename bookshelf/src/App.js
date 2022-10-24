@@ -4,7 +4,6 @@ import { Route, Routes } from "react-router-dom";
 import ErrorPage from './pages/errorPage/errorPage';
 import FrontPage from './pages/frontPage/frontPage';
 import ShelfPage from './pages/shelfPage/shelfPage';
-import BookList from './components/bookList';
 
 function App() {
   return (
