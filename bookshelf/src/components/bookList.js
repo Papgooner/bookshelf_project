@@ -1,6 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function BookList(props) {
+  const [thing, setThing] = useState();
+
   //  STATUS CODES:  
   //  1 = ALREADY READ
   //  2 = CURENTLY READING
@@ -30,8 +32,11 @@ function BookList(props) {
     props.sendData(listOfBooks);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  let thing = props.newStatus;
-  const found = listOfBooks.find(element => element.id === "1")
-    console.log(found);
+
+  console.log(props.newStatus);
+  console.log(props.newStatus.statusValue);
+  // specifying element with [0] or using .id immediatley causes the app to break
+    const found = listOfBooks.find(element => element.id === thing);
+   console.log(found); 
 }
 export default BookList;

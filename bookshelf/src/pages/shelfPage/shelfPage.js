@@ -13,11 +13,11 @@ function ShelfPage() {
     function collectStatus(recievedStatus) {
         let statusChange = recievedStatus;
         console.log(statusChange[0].statusValue);
+        console.log(statusChange);
         setNewStatus(statusChange);
     };
 
     function collectData(recievedBooks) {
-        console.log(recievedBooks);
 
         var readBooks = recievedBooks.filter(function(a) {
             return a.status === 1;
