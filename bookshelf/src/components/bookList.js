@@ -30,5 +30,8 @@ function BookList(props) {
     props.sendData(listOfBooks);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  let thing = props.newStatus;
+  const found = listOfBooks.find(element => element.id === "1")
+    console.log(found);
 }
 export default BookList;

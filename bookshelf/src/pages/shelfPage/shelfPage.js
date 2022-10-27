@@ -5,9 +5,16 @@ import "./shelfPage.css";
 import NavBar from "../../components/navBar";
 
 function ShelfPage() {
-    const [data1, setData1] = useState([])
-    const [data2, setData2] = useState([])
-    const [data3, setData3] = useState([])
+    const [data1, setData1] = useState([]);
+    const [data2, setData2] = useState([]);
+    const [data3, setData3] = useState([]);
+    const [newStatus, setNewStatus] = useState([]);
+
+    function collectStatus(recievedStatus) {
+        let statusChange = recievedStatus;
+        console.log(statusChange[0].statusValue);
+        setNewStatus(statusChange);
+    };
 
     function collectData(recievedBooks) {
         console.log(recievedBooks);
@@ -27,20 +34,17 @@ function ShelfPage() {
         setData1(readBooks);
         setData2(currentBooks);
         setData3(plannedBooks);
-        console.log(readBooks);
-        console.log(currentBooks);
-        console.log(plannedBooks);
     };
-    const showReadBooks = data1?.map((pol) => <Book key={pol.id} title={pol.title} id={pol.id} author={pol.author} genre={pol.genre} />)
-    const showCurrentBooks = data2?.map((pol) => <Book key={pol.id} title={pol.title} id={pol.id} author={pol.author} genre={pol.genre} />)
-    const showPlannedBooks = data3?.map((pol) => <Book key={pol.id} title={pol.title} id={pol.id} author={pol.author} genre={pol.genre} />)
+    const showReadBooks = data1?.map((pol) => <Book key={pol.id} title={pol.title} id={pol.id} author={pol.author} genre={pol.genre} status={pol.status}  sendStatus={collectStatus} />)
+    const showCurrentBooks = data2?.map((pol) => <Book key={pol.id} title={pol.title} id={pol.id} author={pol.author} genre={pol.genre} status={pol.status} sendStatus={collectStatus} />)
+    const showPlannedBooks = data3?.map((pol) => <Book key={pol.id} title={pol.title} id={pol.id} author={pol.author} genre={pol.genre} status={pol.status} sendStatus={collectStatus} />)
     return (
         <div id="shelfPageDiv">
             <div id="navDiv">
                 <NavBar />
                 </div>
                 <div id="contentDiv">
-        <BookList sendData={collectData} /> 
+        <BookList sendData={collectData} newStatus={newStatus} /> 
         <div className="titleAndContent" >
             <h1>Previously Read</h1>
         <div id="displayBooks">
