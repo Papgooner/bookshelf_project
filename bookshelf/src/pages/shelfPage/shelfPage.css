@@ -6,13 +6,9 @@ h1 {
 }
 
 #contentDiv {
-    background-color: rgb(209, 206, 206);
-    border-radius: 10px;
     top: 0px;
     height: auto;
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 5%;
+    margin-top: 1%;
 }
 
 #shelfPageDiv {
@@ -33,4 +29,10 @@ h1 {
     height: 90%;
     width: 95%;
     margin-left: 2.5%;
+}
+
+.titleAndContent {
+    border-radius: 10px;
+    background-color: rgb(209, 206, 206);
+    margin: 1%;
 }

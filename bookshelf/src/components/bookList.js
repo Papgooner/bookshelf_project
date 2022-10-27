@@ -1,33 +1,34 @@
 import { useEffect } from "react";
 
 function BookList(props) {
-    let listOfBooks = [];
-    let bookOne = {title: "1984", author: "George Orwell", genre: "Fiction", id: "0"};
-    let bookTwo = {title: "The Two Towers", author: "J. R. R. Tolkien", genre: "Fiction", id: "1"};
-    let bookThree = {title: "Oxford English Dictionary", author: "Oxford Dictionaries", genre: "Non-Fiction", id: "2"};
-    let bookFour = {title: "1984", author: "George Orwell", genre: "Fiction", id: "3"};
-    let bookFive = {title: "The Two Towers", author: "J. R. R. Tolkien", genre: "Fiction", id: "4"};
-    let bookSix = {title: "Oxford English Dictionary", author: "Oxford Dictionaries", genre: "Non-Fiction", id: "5"};
-    let bookSeven = {title: "1984", author: "George Orwell", genre: "Fiction", id: "6"};
-    let bookEight = {title: "The Two Towers", author: "J. R. R. Tolkien", genre: "Fiction", id: "7"};
-    let bookNine = {title: "Oxford English Dictionary", author: "Oxford Dictionaries", genre: "Non-Fiction", id: "8"};
-    let bookTen = {title: "1984", author: "George Orwell", genre: "Fiction", id: "9"};
-    let bookEleven = {title: "The Two Towers", author: "J. R. R. Tolkien", genre: "Fiction", id: "10"};
-    let bookTwelve = {title: "Oxford English Dictionary", author: "Oxford Dictionaries", genre: "Non-Fiction", id: "11"};
-    let bookThirteen = {title: "1984", author: "George Orwell", genre: "Fiction", id: "12"};
-    let bookFourteen = {title: "The Two Towers", author: "J. R. R. Tolkien", genre: "Fiction", id: "13"};
-    let bookFifthteen= {title: "Oxford English Dictionary", author: "Oxford Dictionaries", genre: "Non-Fiction", id: "14"};
-    let bookSixteen = {title: "1984", author: "George Orwell", genre: "Fiction", id: "15"};
-    let bookSeventeen = {title: "The Two Towers", author: "J. R. R. Tolkien", genre: "Fiction", id: "16"};
-    let bookEighteen = {title: "Oxford English Dictionary", author: "Oxford Dictionaries", genre: "Non-Fiction", id: "`7"};
-    listOfBooks.push(bookOne, bookTwo, bookThree, bookFour, bookFive, bookSix, bookSeven, bookEight, bookNine, bookTen, bookEleven, bookTwelve, bookThirteen, bookFourteen, bookFifthteen, bookSixteen, bookSeventeen, bookEighteen);
-    console.log(listOfBooks);
+  //  STATUS CODES:  
+  //  1 = ALREADY READ
+  //  2 = CURENTLY READING
+  //  3 = PLAN TO READ
+  let listOfBooks = [
+    { title: "1984", author: "George Orwell", genre: "Fiction", id: "0", status: 1 },
+    { title: "The Two Towers", author: "J. R. R. Tolkien", genre: "Fiction", id: "1", status: 2 },
+    { title: "Oxford English Dictionary", author: "Oxford Dictionaries", genre: "Non-Fiction", id: "2", status: 1 },
+    { title: "1984", author: "George Orwell", genre: "Fiction", id: "3", status: 3 },
+    { title: "The Two Towers", author: "J. R. R. Tolkien", genre: "Fiction", id: "4", status: 3 },
+    { title: "Oxford English Dictionary", author: "Oxford Dictionaries", genre: "Non-Fiction", id: "5", status: 3 },
+    { title: "1984", author: "George Orwell", genre: "Fiction", id: "6", status: 3 },
+    { title: "The Two Towers", author: "J. R. R. Tolkien", genre: "Fiction", id: "7", status: 1 },
+    { title: "Oxford English Dictionary", author: "Oxford Dictionaries", genre: "Non-Fiction", id: "8", status: 3 },
+    { title: "1984", author: "George Orwell", genre: "Fiction", id: "9", status: 2 },
+    { title: "The Two Towers", author: "J. R. R. Tolkien", genre: "Fiction", id: "10", status: 1 },
+    { title: "Oxford English Dictionary", author: "Oxford Dictionaries", genre: "Non-Fiction", id: "11", status: 3 },
+    { title: "1984", author: "George Orwell", genre: "Fiction", id: "12", status: 1 },
+    { title: "The Two Towers", author: "J. R. R. Tolkien", genre: "Fiction", id: "13", status: 3, },
+    { title: "Oxford English Dictionary", author: "Oxford Dictionaries", genre: "Non-Fiction", id: "14", status: 1 },
+    { title: "1984", author: "George Orwell", genre: "Fiction", id: "15", status: 1 },
+    { title: "The Two Towers", author: "J. R. R. Tolkien", genre: "Fiction", id: "16", status: 3 },
+    { title: "Oxford English Dictionary", author: "Oxford Dictionaries", genre: "Non-Fiction", id: "`7", status: 3 },
+  ];
 
-    useEffect(() => {
-        console.log(listOfBooks);
-        props.sendData(listOfBooks);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-      }, []);
+  useEffect(() => {
+    props.sendData(listOfBooks);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 }
-
 export default BookList;
