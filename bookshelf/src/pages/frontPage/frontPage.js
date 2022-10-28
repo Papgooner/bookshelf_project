@@ -4,7 +4,8 @@ function FrontPage() {
     return (
         <div>
             <NavBar />
-        <h1>Front page</h1>
+        <h1>Bookshelf</h1>
+        <p>Data is taken from a hard coded data set, not an API.</p>
         </div>
     )
 }
